@@ -29,7 +29,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          
+
           <li class="nav-item">
             <a class="nav-link" href="cold_weather.html">Cold weather activities</a>
           </li>
@@ -67,10 +67,16 @@
   <!-- Content section -->
   <section class="py-5">
     <div class="container">
-      <h1>Section Heading</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-    </div>
+      <h1>Keep in touch for weekly activities</h1>
+      <p class="lead">
+        <form method="post" action="/signup">
+          <label for ="name">Name: </label>
+          <input type = "name" id="name" name="name" required="required">
+          <label for ="email">Email Address: </label>
+          <input type = "email" id="email" name="email" required="required">
+          <input type ="submit" value = "submit" id="submit-button">
+        </form>
+          </div>
   </section>
 
   <!-- Footer -->

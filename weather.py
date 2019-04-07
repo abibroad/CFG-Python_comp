@@ -2,8 +2,10 @@
 from flask import Flask, render_template, request
 import logging
 
+#don't know the relevance of the flask name
 flask_app = Flask(__name__)
 
+#copied from Eduardo github (don't know if it's all needed)
 #CONFIGURING LOGGING
 logger = logging.getLogger('my_logger')
 logger.setLevel(logging.DEBUG)
@@ -20,13 +22,14 @@ fh.setFormatter(formatter)
 logger.addHandler(fh)
 
 
-@flask_app.route('/coldweather')
+
+@flask_app.route('/cold_weather')
 def cold_weather():
     return render_template("cold_weather.html")
 
-@flask_app.route("/<name>")
+@flask_app.route("/warm_weather")
 def hello_someone(name):
-	return render_template("hello.html", name=name.title())
+	return render_template("warm_weather.html")
 
 
 logger.info('STARTING APP, TRY IT OUT!!!')
@@ -35,7 +38,7 @@ if __name__ == '__main__':
     flask_app.run(debug=True, use_reloader=True)
 
 
-import requests
+#weatherapi
 
 def weather_temp(input_temperature):
     if input_temperature <=15:
@@ -66,3 +69,11 @@ print "It's {}C in {}, and the sky is {}".format(temperature, name, weather)
 
 inside_activities = ["museum", "watch netflix", "cinema"]
 outdoor_activities = ["park", "beach", "walk"]
+
+
+#contact form
+@app.route("signup",methods=["POST"])
+def sign_up()
+form_data = request.format
+print form_data["email"]
+return "You are now subscribed to our mailing list!"
