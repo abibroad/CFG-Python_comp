@@ -74,6 +74,6 @@ outdoor_activities = ["park", "beach", "walk"]
 #contact form
 @app.route("signup",methods=["POST"])
 def sign_up():
-form_data = request.format
-print form_data["email"]
-return "You are now subscribed to our mailing list!"
+    form_data = request.format
+    print form_data["email"]
+    return "You are now subscribed to our mailing list!"
