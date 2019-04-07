@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import logging
 
 flask_app = Flask(__name__)
@@ -20,9 +20,9 @@ fh.setFormatter(formatter)
 logger.addHandler(fh)
 
 
-@flask_app.route('/')
-def homepage():
-    return "Hello World"
+@flask_app.route('/coldweather')
+def cold_weather():
+    return render_template("cold_weather.html")
 
 @flask_app.route("/<name>")
 def hello_someone(name):
@@ -39,9 +39,9 @@ import requests
 
 def weather_temp(input_temperature):
     if input_temperature <=15:
-        return "Stay at home"
+        return render_template("cold_weather.html")
     else:
-        return "Go outside"
+        return render_template("warm_weather.html")
 #approute to return html page
 
 endpoint = "http://api.openweathermap.org/data/2.5/weather"
@@ -62,7 +62,7 @@ weather = data["weather"][0]["main"]
 print "It's {}C in {}, and the sky is {}".format(temperature, name, weather)
 
 
-return weather_temp(temperature)
+#return weather_temp(temperature)
 
 inside_activities = ["museum", "watch netflix", "cinema"]
 outdoor_activities = ["park", "beach", "walk"]
