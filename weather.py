@@ -66,5 +66,3 @@ return weather_temp(temperature)
 
 inside_activities = ["museum", "watch netflix", "cinema"]
 outdoor_activities = ["park", "beach", "walk"]
-
-print
