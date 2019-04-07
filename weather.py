@@ -28,7 +28,7 @@ def cold_weather():
     return render_template("cold_weather.html")
 
 @flask_app.route("/warm_weather")
-def hello_someone(name):
+def warm_weather():
 	return render_template("warm_weather.html")
 
 
@@ -73,7 +73,7 @@ outdoor_activities = ["park", "beach", "walk"]
 
 #contact form
 @app.route("signup",methods=["POST"])
-def sign_up()
+def sign_up():
 form_data = request.format
 print form_data["email"]
 return "You are now subscribed to our mailing list!"
