@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, request
 import logging
+import requests
 
 #don't know the relevance of the flask name
 flask_app = Flask(__name__)
@@ -31,6 +32,11 @@ def cold_weather():
 def warm_weather():
 	return render_template("warm_weather.html")
 
+
+logger.info('STARTING APP, TRY IT OUT!!!')
+
+if __name__ == '__main__':
+    flask_app.run(debug=True, use_reloader=True)
 
 
 
@@ -68,14 +74,8 @@ outdoor_activities = ["park", "beach", "walk"]
 
 
 #contact form
-@app.route("signup",methods=["POST"])
+@flask_app.route("signup",methods=["POST"])
 def sign_up():
     form_data = request.format
     print form_data["email"]
     return "You are now subscribed to our mailing list!"
-
-
-logger.info('STARTING APP, TRY IT OUT!!!')
-
-if __name__ == '__main__':
-    flask_app.run(debug=True, use_reloader=True)
