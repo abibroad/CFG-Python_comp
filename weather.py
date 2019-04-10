@@ -45,8 +45,8 @@ if __name__ == '__main__':
 #def weather_temp(input_temperature):
  #  if input_temperature <=15:
 #       return render_template("cold_weather.html")
-#    else:
-#        return render_template("warm_weather.html")
+ #  else:
+#       return render_template("warm_weather.html")
 #approute to return html page
 
 # endpoint = "http://api.openweathermap.org/data/2.5/weather"
@@ -74,8 +74,8 @@ if __name__ == '__main__':
 
 
 #contact form
-# @flask_app.route("signup",methods=["POST"])
-# def sign_up():
-#     form_data = request.format
-#     print form_data["email"]
-#     return "You are now subscribed to our mailing list!"
+#@flask_app.route("signup",methods=["POST"])
+#def sign_up():
+#        form_data = request.format
+#        print form_data["email"]
+#        return "You are now subscribed to our mailing list!"
