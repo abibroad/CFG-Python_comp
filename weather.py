@@ -32,10 +32,6 @@ def warm_weather():
 	return render_template("warm_weather.html")
 
 
-logger.info('STARTING APP, TRY IT OUT!!!')
-
-if __name__ == '__main__':
-    flask_app.run(debug=True, use_reloader=True)
 
 
 #weatherapi
@@ -77,3 +73,9 @@ def sign_up():
     form_data = request.format
     print form_data["email"]
     return "You are now subscribed to our mailing list!"
+
+
+logger.info('STARTING APP, TRY IT OUT!!!')
+
+if __name__ == '__main__':
+    flask_app.run(debug=True, use_reloader=True)
