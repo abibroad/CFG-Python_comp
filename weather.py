@@ -75,7 +75,7 @@ def weather_temp(input_temperature):
 
 #contact form
 @flask_app.route("signup",methods=["POST"])
-    def sign_up():
+def sign_up():
         form_data = request.format
         print form_data["email"]
         return "You are now subscribed to our mailing list!"
