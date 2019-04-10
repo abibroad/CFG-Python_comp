@@ -42,11 +42,11 @@ if __name__ == '__main__':
 
 #weatherapi
 
-#def weather_temp(input_temperature):
- #  if input_temperature <=15:
-#       return render_template("cold_weather.html")
-#    else:
-#        return render_template("warm_weather.html")
+def weather_temp(input_temperature):
+   if input_temperature <=15:
+       return render_template("cold_weather.html")
+    else:
+        return render_template("warm_weather.html")
 #approute to return html page
 
 # endpoint = "http://api.openweathermap.org/data/2.5/weather"
