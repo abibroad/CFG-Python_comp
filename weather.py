@@ -42,40 +42,40 @@ if __name__ == '__main__':
 
 #weatherapi
 
-def weather_temp(input_temperature):
-    if input_temperature <=15:
-        return render_template("cold_weather.html")
-    else:
-        return render_template("warm_weather.html")
+# def weather_temp(input_temperature):
+#     if input_temperature <=15:
+#         return render_template("cold_weather.html")
+#     else:
+#         return render_template("warm_weather.html")
 #approute to return html page
 
-endpoint = "http://api.openweathermap.org/data/2.5/weather"
-payload = {"q": "London,UK","units":"metric","appid":"499d6e460dc8e74479ce76d519c1f1f6"}
-
-response = requests.get(endpoint, params=payload)
-data = response.json()
-
-print data["main"]
-print response.url
-print response.status_code
-print response.headers["content-type"]
-print response.text
-
-temperature = data["main"]
-name = data["name"]
-weather = data["weather"][0]["main"]
-print "It's {}C in {}, and the sky is {}".format(temperature, name, weather)
+# endpoint = "http://api.openweathermap.org/data/2.5/weather"
+# payload = {"q": "London,UK","units":"metric","appid":"499d6e460dc8e74479ce76d519c1f1f6"}
+#
+# response = requests.get(endpoint, params=payload)
+# data = response.json()
+#
+# print data["main"]
+# print response.url
+# print response.status_code
+# print response.headers["content-type"]
+# print response.text
+#
+# temperature = data["main"]
+# name = data["name"]
+# weather = data["weather"][0]["main"]
+# print "It's {}C in {}, and the sky is {}".format(temperature, name, weather)
 
 
 #return weather_temp(temperature)
 
-inside_activities = ["museum", "watch netflix", "cinema"]
-outdoor_activities = ["park", "beach", "walk"]
+# inside_activities = ["museum", "watch netflix", "cinema"]
+# outdoor_activities = ["park", "beach", "walk"]
 
 
 #contact form
-@flask_app.route("signup",methods=["POST"])
-def sign_up():
-    form_data = request.format
-    print form_data["email"]
-    return "You are now subscribed to our mailing list!"
+# @flask_app.route("signup",methods=["POST"])
+# def sign_up():
+#     form_data = request.format
+#     print form_data["email"]
+#     return "You are now subscribed to our mailing list!"
